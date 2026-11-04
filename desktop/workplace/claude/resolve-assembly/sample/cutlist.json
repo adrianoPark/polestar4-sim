@@ -1,0 +1,46 @@
+{
+  "project": "poc_sample",
+  "fps": 24,
+  "width": 1080,
+  "height": 1920,
+  "scene_padding": 0.4,
+  "voice_offset": 0.15,
+  "motion_upscale": 3,
+
+  "audio": {
+    "bgm": "assets/bgm.wav",
+    "bgm_gain_db": -14,
+    "voice_lufs": -15,
+    "duck": true,
+    "duck_settings": { "threshold": 0.02, "ratio": 8, "attack": 20, "release": 400 }
+  },
+
+  "subtitles": { "enabled": true, "max_chars": 16, "burn_in_preview": true, "to_timeline": true },
+  "lut": null,
+
+  "render": { "auto": true, "dir": "output", "name": "poc_sample_resolve", "format": "mp4", "codec": "H264", "quality": "Best" },
+
+  "scenes": [
+    {
+      "id": "s01",
+      "media": "assets/s01.png",
+      "motion": { "type": "zoom_in", "amount": 0.15, "ease": "smooth" },
+      "voice": "assets/v01.wav",
+      "text": "안녕하세요. 오늘은 새로운 제작 방식을 테스트합니다."
+    },
+    {
+      "id": "s02",
+      "media": "assets/s02.mp4",
+      "in": 0.5,
+      "voice": "assets/v02.wav",
+      "text": "이 장면은 영상 클립을 사용하고, 길이는 음성에 자동으로 맞춰집니다."
+    },
+    {
+      "id": "s03",
+      "media": "assets/s03.png",
+      "duration": 2.5,
+      "motion": { "type": "pan_right", "amount": 0.2, "ease": "smooth" },
+      "text": "마지막은 음성 없는 팬 컷입니다."
+    }
+  ]
+}
